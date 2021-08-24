@@ -208,6 +208,42 @@ console.log('null === undefined', null === undefined);
 console.log('0 === undefined', 0 === undefined);
 `);
 
+snippets.push(`
+// Cap.1 Comparações Negado
+
+console.log('5 !== 5', 5 !== 5);
+console.log('"1" != 1', "1" != 1);
+console.log('"JEP" === "JEP"', "JEP" !== "JEP");
+console.log('1.00000 === "1"', 1.00000 != "1");
+`);
+
+snippets.push(`
+// Cap.1 Comparações Negado
+
+console.log('5 !== 5', 5 !== 5);
+console.log('"1" != 1', "1" != 1);
+console.log('"JEP" === "JEP"', "JEP" !== "JEP");
+console.log('1.00000 === "1"', 1.00000 != "1");
+`);
+
+snippets.push(`
+// Cap.1 Operadores Lógicos
+
+console.log('5 !== 5', 5 !== 5);
+console.log('"1" != 1', "1" != 1);
+console.log('"JEP" === "JEP"', "JEP" !== "JEP");
+console.log('1.00000 === "1"', 1.00000 != "1");
+`);
+
+snippets.push(`
+// Cap.1 Operadores Lógicos
+
+console.log('5 !== 5', true && false);
+console.log('"1" != 1', "1" != 1);
+console.log('"JEP" === "JEP"', "JEP" !== "JEP");
+console.log('1.00000 === "1"', 1.00000 != "1");
+`);
+
 const categories = [
     'Cap.1',
     'Cap.1 Tipos',
@@ -215,6 +251,7 @@ const categories = [
     'Cap.1 Operações com Strings',
     'Cap.1 Booleanos Valores Truthy',
     'Cap.1 Booleanos Valores Falsy',
+    'Cap.1 Comparações',
     'Cap.1 Comparações',
 ];
 
