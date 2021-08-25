@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Prism from 'prismjs';
 import './App.css';
 import './prism.css';
-import { snippets, categories } from './snippets';
+import { snippets, categories } from './snippets/snippets';
 Prism.manual = true;
 let valor = "console.log('This is JEP');";
 let transfer = '';
