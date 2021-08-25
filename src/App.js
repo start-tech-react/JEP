@@ -1,3 +1,4 @@
+// Versão para colaboração
 import React, { Component } from 'react';
 import Prism from 'prismjs';
 import './App.css';
