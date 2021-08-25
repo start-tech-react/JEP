@@ -1,8 +1,8 @@
 // Capítulos
 const snippets = [];
-for (let i = 1; i <= 2; i++) {
-    const { snippetsCap } = require("./cap" + i);
-    snippets.push(...snippetsCap);
-}
+const { snippetsCap: cap1 } = require("./cap1");
+snippets.push(...cap1);
+const { snippetsCap: cap2 } = require("./cap2");
+snippets.push(...cap2);
 
 module.exports = { snippets };
