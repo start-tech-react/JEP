@@ -379,10 +379,18 @@ if (5==5 || 4 > 3 || 5 < 7)
 `);
 
 snippets.push(`
-// Cap.2 Execução Condicional
+// Cap.2 Execução Condicional If
 if (5==5) {
     console.log("Yes3")
 };
+`);
+
+snippets.push(`
+// Cap.2 Execução Condicional If Else
+if (variable == "value1") console.log('1 if');
+else if (variable == "value2") console.log('elseif1');
+else if (variable == "value3") console.log('elseif2');
+else console.log('else');;
 `);
 
 snippets.push(`
@@ -469,6 +477,22 @@ a **= 2;
 console.log(a);
 `);
 
+snippets.push(`
+// Cap.2 Condicional Switch
+switch (prompt("Como está?")) {
+    case "feliz":
+      console.log("Ah, que bom!");
+      break;
+    case "triste":
+      console.log("Que peninha;;;");
+    default:
+      console.log("Não entendi");
+      break;
+  }
+`);
+
+
+
 const categories = [
     'Cap.1',
     'Cap.1 Tipos',
@@ -481,6 +505,7 @@ const categories = [
     'Cap.2 Escopos',
     'Cap.2 Funções',
     'Cap.2 Execução Condicional',
+    'Cap.2 Condicional Switch',
     'Cap.2 Loops',
     'Cap.2 Atualização Sucinta',
 ];
