@@ -189,3 +189,21 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 arr.splice(3, 8, ...a); // três pontos significa propagação, paara não ter que inserir os números de a um a um.
 console.log("Splice: " + arr);
 `);
+
+cap4.push(`
+// Cap.4 Strings e Arrays map
+const numeros = [0, 1, 2, 3, 4];
+const numerosDobrados = numeros.map(item => item * 2)
+
+console.log(numerosDobrados)
+`);
+
+cap4.push(`
+// Cap.4 Strings e Arrays map
+const numeros = [0, 1, 2, 3, 4];
+const numerosSomados = numeros.reduce(
+    (acumulador, itemAtual) => acumulador + itemAtual
+);
+
+console.log(numerosSomados)
+`);

@@ -11,9 +11,12 @@ const objPessoa = {
     idade: 41,
     altura: 1.74,
     temCNH: true,
-    apelidos: ["Fe", "Feli", "Lilica"]
+    apelidos: ["Fe", "Feli", "Lilica"],
+    celular: { os: "Android", cor: "azul"},
+    oie: (txt) => console.log(txt)
 };
 
+objPessoa.oie('oie');
 console.log(objPessoa);
 `);
 
@@ -30,16 +33,18 @@ const objPessoa = {
 };
 
 const varBusca = "nome";
-
-console.log('Bem-vinda ' + objPessoa.nome);
-console.log('Bem-vinda ' + objPessoa["nome"]);
-console.log('Bem-vinda ' + objPessoa[varBusca]);
-
+const { nome:nome, idade:idade } = objPessoa;
+const [ apelido1, apelido2 ] = objPessoa.apelidos;
+console.log('Bem-vinda1 ' + objPessoa.nome);
+console.log('Bem-vinda2 ' + objPessoa["nome"]);
+console.log('Bem-vinda3 ' + objPessoa[varBusca]);
+console.log('Bem-vinda4 ' + nome + ' ' + idade);
+console.log('Bem-vinda5 ' + apelido1 + ' ' + apelido2 );
 `);
 
 cap5.push(`
 // Cap.5 Objeto
-// Extendendo um objeto
+// Manipulando
 const objPessoa = {
     nome: "Felícia",
     idade: 41,
@@ -78,18 +83,6 @@ const prop = "altura";
 objPessoa[prop] = 1.70;
 objPessoa.apelidos[0] = "Giuza";
 objPessoa.apelidos.push("Giugiu", "Gi");
-objPessoa.teste = "Será apagado";
-delete objPessoa.teste;
-
-const cnh = objPessoa.temCNH ? "tem" : "não tem";
-let apelidos = "";
-for (const i of objPessoa.apelidos) {
-    apelidos += i + ",";
-}
-
-console.log(objPessoa);
-
-// Deletando uma propriedade. Cuidado, essa operação é mais lenta do que setar para null, "", 0 etc
 objPessoa.teste = "Será apagado";
 delete objPessoa.teste;
 
