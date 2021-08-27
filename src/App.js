@@ -37,7 +37,7 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h3>JEP - Javascript Explorer Playground <a href="https://github.com/GiuZambot/jep">Repositório GitHub</a></h3>
+          <h3>JEP - Javascript Explorer Playground <a href="https://github.com/start-tech-react/JEP">Repositório GitHub</a></h3>
         </header>
         <main>
           <Explorer loging={() => this.loging()} tranfer={this.state.conteudo} />

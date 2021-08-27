@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .App {
     display: flex;
     flex-direction: column;
@@ -36,31 +40,19 @@ main {
 }
 
 .box {
-    width: 80%;
     z-index: 2;
     position: sticky;
-    top: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    top: 7%;
 }
 
 .console {
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    background-color: #2d2d2d;
-    border: 1px solid #e9dbdb;
-    border-radius: 5px;
-    padding: 10px;
 }
 
 .consolelog {
-    width: 98%;
+    width: 100%;
     box-sizing: border-box;
     background-color: #2d2d2d;
     border: 1px solid #e9dbdb;
@@ -88,8 +80,8 @@ main {
 }
 
 .snippets {
-    margin-top: 10px;
-    padding: 20px;
+    max-width: 50%;
+    padding: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -103,16 +95,21 @@ main {
 }
 
 #code {
-    width: 85%;
+    width: 97%;
     padding: 15px;
-    color: white;
-    background-color: #2d2d2d;
-    font-size: 18px;
+    margin: 0 15px;
+    padding: 10px;
+    color: #61dafb;
+    background-color: rgba(105, 105, 105, 0.218);
+    border: 1px solid #61dafb77;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    font-size: 20px;
 }
 
 pre {
     position: relative;
-    max-width: 500px;
+    /* max-width: 500px; */
     transition: all 1s ease;
 }
 
@@ -145,13 +142,14 @@ pre button:hover {
 }
 
 .btn-executar {
-    margin: 5px;
-    padding: 5px;
+    margin: 15px;
+    padding: 10px;
     color: #61dafb;
     background-color: rgba(105, 105, 105, 0.218);
     border: 1px solid #61dafb77;
     border-radius: 5px;
     transition: all 0.5s ease;
+    font-size: 20px;
 }
 
 .btn-executar:hover {

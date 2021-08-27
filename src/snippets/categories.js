@@ -12,7 +12,9 @@ const categories = [
     'Cap.2 Execução Condicional',
     'Cap.2 Condicional Switch',
     'Cap.2 Loops',
-    'Cap.2 Atualização Sucinta'
+    'Cap.2 Atualização Sucinta',
+    'Cap.4 Strings e Arrays',
+    'Cap.5 Objeto'
 ];
 
 module.exports = { categories };
