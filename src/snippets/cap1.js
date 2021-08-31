@@ -3,6 +3,16 @@ const cap1 = [`
 console.log(console);`];
 
 cap1.push(`
+// Console table
+const obj = [
+    {name: "Felicia", idade:33 },
+    {name: "Gelia", idade:27},
+    {name: "Carla", idade:15}
+];
+console.table(obj);
+`);
+
+cap1.push(`
 // Cap.1 Tipos
 // Strings
 console.log('Strings', "Eu sou uma string");

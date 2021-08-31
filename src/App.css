@@ -15,17 +15,6 @@ body {
     min-height: 100vh;
 }
 
-.App-logo {
-    height: 50px;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 25s linear;
-    }
-}
-
 main {
     position: relative;
     background-color: #282c34;
@@ -42,7 +31,8 @@ main {
 .box {
     z-index: 2;
     position: sticky;
-    top: 7%;
+    top: 0;
+    padding: 40px 20px;
 }
 
 .console {

@@ -21,14 +21,17 @@ const { cap14 } = require("./snippets/cap14");
 const snippets = [...cap1, ...cap2, ...cap3, ...cap4, ...cap5, ...cap6, ...cap7, ...cap8, ...cap9, ...cap10, ...cap11, ...cap12, ...cap13, ...cap14];
 Prism.manual = true;
 let valor = "console.log('This is JEP');";
-let transfer = '';
+let transfer = [];
 export class App extends Component {
   loging = () => {
-    const arr = transfer.split('\n').map((code, i) =>
+    if (!transfer.length)
+      transfer.push('Para essa operação, verifique no console do navegador.');
+    if (transfer.findIndex(val => transfer[0].includes('object Object')) >= 0)
+      transfer.push("Há objeto no retorno, verifique no console do navegador para mais detalhes.")
+    transfer = transfer.map((code, i) =>
       <Code key={i} code={code} className={`language-js`} butt={'0'}></Code>
     );
-    arr.pop();
-    this.setState({ conteudo: arr });
+    this.setState({ conteudo: transfer });
   }
 
   state = { conteudo: transfer };
@@ -211,9 +214,10 @@ function evaluate(y) {
   document.head.removeChild(document.head.lastChild);
 }
 
-var realConsoleLog = console.log;
+const realConsoleLog = console.log;
 console.log = function () {
-  var message = [].join.call(arguments, ": ");
-  transfer += message + "\n";
+  let message = [].join.call(arguments, ": ");
+  // transfer += message + "\n";
+  transfer.push(message);
   realConsoleLog.apply(console, arguments);
 };
