@@ -245,7 +245,8 @@ switch (prompt("Como está?")) {
       console.log("Ah, que bom!");
       break;
     case "triste":
-      console.log("Que peninha;;;");
+      console.log("Que peninha...");
+      break;
     default:
       console.log("Não entendi");
       break;
