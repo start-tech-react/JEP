@@ -1,8 +1,8 @@
-const cap4 = [];
+const cap = [];
 
-module.exports = { cap4 };
+module.exports = { cap };
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -10,7 +10,7 @@ r = frase.includes("sou"); // existe 'sou' na string frase?
 console.log(r);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -18,7 +18,7 @@ r = frase.indexOf("sou"); //qual o índice da primeira ocorrencia de "sou"
 console.log(r);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -26,21 +26,21 @@ r = frase.indexOf("sou", 15); //primeira ocorrencia a partir do indice 15
 console.log(r);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
 r = frase.lastIndexOf("m"); // qual o indice da ultima ocorrencia de "m"
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
 r = frase.lastIndexOf("m", 8); // ultima ocorrencia a partir do indice 8
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -49,7 +49,7 @@ let r;
 r = frase.slice(3, 6); // sou
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -58,7 +58,7 @@ let r;
 r = frase.slice(-8); // palavras
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -67,7 +67,7 @@ let r;
 r = frase.substr(3, 3); // sou
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -76,7 +76,7 @@ let r;
 r = frase.substr(-8, 4); // pala
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -85,7 +85,7 @@ let r;
 r = frase.replace("uma frase", "um texto");
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -94,7 +94,7 @@ let r;
 r = frase.replace(/a/gi, "-");
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -103,7 +103,7 @@ let r;
 r = frase.replace(" ", ",").replace(" ", ",");
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "    Eu sou Uma frase com Algumas palavras";
 let r;
@@ -117,7 +117,7 @@ console.log(r);
 r = r.toLowerCase(); // tudo para minuscula 
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 let r = 155;
 r = '' + r; // padStart e padEnd precisam de uma string            
@@ -128,7 +128,7 @@ r = r.padEnd(17, "*"); // insere * no incio até completar tamanho = 17
 console.log(r);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r;
@@ -136,7 +136,7 @@ let r;
 r = frase.split(" "); // transforma numa array, separando por espaço
 console.log(r);`);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r, arr;
@@ -146,7 +146,7 @@ r = arr.indexOf("sou"); //agora dá 1, pois não é mais uma string
 console.log(r);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let arr;
@@ -156,7 +156,7 @@ console.log("Reverse: " + arr);
 `);
 
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const frase = "Eu sou uma frase com algumas palavras";
 let r, arr;
@@ -165,7 +165,7 @@ r = arr.join("-"); // ao contrário de split, junta numa string separando por "-
 console.log("Join: " + r);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const a = [0, 1, 2, 3];
 const b = [4, 5, 6, 7, 8, 9, 10];
@@ -174,14 +174,14 @@ let arr = a.concat(b); // junta duas arrays
 console.log("Concat: " + arr);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 arr = arr.slice(1, 9); //retorna uma array do indice 1 até 8 (9 não incluso)
 console.log("Slice: " + arr);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays
 const a = [0, 1, 2, 3];
 const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -190,7 +190,7 @@ arr.splice(3, 8, ...a); // três pontos significa propagação, paara não ter q
 console.log("Splice: " + arr);
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays map
 const numeros = [0, 1, 2, 3, 4];
 const numerosDobrados = numeros.map(item => item * 2)
@@ -198,7 +198,7 @@ const numerosDobrados = numeros.map(item => item * 2)
 console.log(numerosDobrados)
 `);
 
-cap4.push(`
+cap.push(`
 // Cap.4 Strings e Arrays map
 const numeros = [0, 1, 2, 3, 4];
 const numerosSomados = numeros.reduce(

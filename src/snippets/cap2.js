@@ -1,8 +1,8 @@
-const cap2 = [`
+const cap = [`
 // Explorando o console
 console.log(console);`];
 
-cap2.push(`
+cap.push(`
 // Cap.2 Escopos
 let result = 1;
 {
@@ -11,7 +11,7 @@ let result = 1;
 console.log(result);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Escopos
 let result = 1;
 {
@@ -20,7 +20,7 @@ let result = 1;
 console.log(result);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Escopos
 let result = 1;
 {
@@ -35,7 +35,7 @@ let result = 1;
 console.log(result);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Escopos
 {
     let result = 11;
@@ -44,7 +44,7 @@ cap2.push(`
 console.log(typeof result);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Escopos
 {
     const result = 33;
@@ -53,7 +53,7 @@ cap2.push(`
 console.log(typeof result);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Sem parametros com retorno
 function foo () {
@@ -63,7 +63,7 @@ function foo () {
 console.log(foo());
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Com parametros sem retorno
 function foo (param) {
@@ -72,32 +72,32 @@ function foo (param) {
 foo("Teste2");
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Confirmação nativa
 console.log(confirm("Vamos nessa?"))
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Requisição nativa
 console.log(prompt("Digite", "Algo"))
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Aviso nativo
 console.log(alert("Você clicou em executar..."))
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Interação
 const num = prompt("Digite um número");
 console.log(alert('O quadrado de '+num+" é "+num**2));
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções Recursivas Loop
 function foo (vezes, atual) {
     if (atual < vezes) {
@@ -113,14 +113,14 @@ function foo (vezes, atual) {
 foo(5,0);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Arrow Function =>
 const a = () => 5 * 8;
 console.log(a());
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Funções
 // Arrow Function =>
 const a = () => {
@@ -130,25 +130,25 @@ const a = () => {
 console.log(a());
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Execução Condicional
 if (5==5) console.log("Yes");
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Execução Condicional
 if (5==5 || 4 > 3 || 5 < 7) 
     console.log("Yes2");
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Execução Condicional If
 if (5==5) {
     console.log("Yes3")
 };
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Execução Condicional If Else
 if (variable == "value1") console.log('1 if');
 else if (variable == "value2") console.log('elseif1');
@@ -156,7 +156,7 @@ else if (variable == "value3") console.log('elseif2');
 else console.log('else');;
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Execução Condicional
 // Ternário
 (5==5 || 4 > 3 || 5 < 7) ?
@@ -164,7 +164,7 @@ cap2.push(`
     console.log("Nooo");
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Loops While e Do
 let number = 0;
 while (number <= 12) {
@@ -173,7 +173,7 @@ while (number <= 12) {
 }
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Loops While e Do
 let cont = 0
 do {
@@ -182,20 +182,20 @@ do {
 } while (cont < 6);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Loops for
 for (var i = 0; i <= 12; i = i + 2)
   console.log(i);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Loops for
 for (var i = 0; i <= 12; i = i + 2) {
    console.log(i); 
 }
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Loops for com break
 for (var i = 10; ; i++) {
     console.log(i)
@@ -204,7 +204,7 @@ for (var i = 10; ; i++) {
 }
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Loops Exemplo
 const rna = "UGGUGUUAUUAAUGGUUU";
 const codons = [];
@@ -214,7 +214,7 @@ for (let i = 0; i < rna.length; i += 3) {
 console.log(codons.join('|'));
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Atualização Sucinta
 let a = 5;
 a++;
@@ -227,7 +227,7 @@ a -= 5;
 console.log(a);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Atualização Sucinta
 let a = 5;
 a *= 2;
@@ -238,7 +238,7 @@ a **= 2;
 console.log(a);
 `);
 
-cap2.push(`
+cap.push(`
 // Cap.2 Condicional Switch
 switch (prompt("Como está?")) {
     case "feliz":
@@ -253,4 +253,4 @@ switch (prompt("Como está?")) {
   }
 `);
 
-module.exports = { cap2 };
+module.exports = { cap };

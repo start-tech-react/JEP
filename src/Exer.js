@@ -1,15 +1,15 @@
 // Versão para colaboração
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Prism from 'prismjs';
 import './App.css';
 import './prism.css';
 import { categories } from './snippets/categories';
-const snippets = [];
-for (let caps = 1; caps < 14; caps++) {
-  const { cap } = require("./snippets/cap" + caps);
-  snippets.push(...cap);
-}
+import exercicios from './snippets/exercicios';
+
+const url = window.location.href.split('/');
+const exercise = url[url.length - 1];
+const { [exercise]: snippets } = exercicios;
+
 Prism.manual = true;
 let valor = "console.log('This is JEP');";
 let transfer = [];

@@ -1,8 +1,8 @@
-const cap5 = [];
+const cap = [];
 
-module.exports = { cap5 };
+module.exports = { cap };
 
-cap5.push(`
+cap.push(`
 // Cap.5 Objeto
 // Criação de Objetos
 
@@ -20,7 +20,7 @@ objPessoa.oie('oie');
 console.log(objPessoa);
 `);
 
-cap5.push(`
+cap.push(`
 // Cap.5 Objeto
 // Acessando Objetos
 
@@ -42,7 +42,7 @@ console.log('Bem-vinda4 ' + nome + ' ' + idade);
 console.log('Bem-vinda5 ' + apelido1 + ' ' + apelido2 );
 `);
 
-cap5.push(`
+cap.push(`
 // Cap.5 Objeto
 // Manipulando
 const objPessoa = {
@@ -65,7 +65,7 @@ console.log(objPessoa.altura + ' + cm de altura');
 console.log('E os apelidos: ' + apelidos);
 `);
 
-cap5.push(`
+cap.push(`
 // Cap.5 Objeto
 // Mais formas de manipular o objeto
 const objPessoa = {
@@ -89,7 +89,7 @@ delete objPessoa.teste;
 console.log(objPessoa);
 `);
 
-cap5.push(`
+cap.push(`
 // Cap.5 Objeto
 // Objeto dentro de objeto
 const carro = {

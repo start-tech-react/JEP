@@ -1,9 +1,9 @@
-const cap7 = [];
+const cap = [];
 
-cap7.push(`
+cap.push(`
 // Cap.7 Subtítulo
 //snippet aqui
 console.log('o que srá mostrado', variavelResultante);
 `);
 
-module.exports = { cap7 };
+module.exports = { cap };
