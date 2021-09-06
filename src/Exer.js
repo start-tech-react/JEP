@@ -1,28 +1,40 @@
 // Versão para colaboração
 import React, { Component } from 'react';
+import {
+  Switch,
+  Link,
+  Route,
+  useParams
+} from "react-router-dom";
 import Prism from 'prismjs';
 import './App.css';
 import './prism.css';
-import { categories } from './snippets/categories';
 import exercicios from './snippets/exercicios';
 
 const url = window.location.href.split('/');
 const exercise = url[url.length - 1];
-const { [exercise]: snippets } = exercicios;
-
+let { [exercise]: snippet } = exercicios;
 Prism.manual = true;
-let valor = "console.log('This is JEP');";
+let problema = `// Problema ${exercise} não encontrado, verifique a URL`;
+let solucao = 'Nada esperado';
+if (snippet) ({ problema, solucao } = snippet);
 let transfer = [];
+
 export class App extends Component {
   loging = () => {
     if (!transfer.length)
-      transfer.push('Para essa operação, verifique no console do navegador.');
+      transfer.push('Resultado: ');
     if (transfer.findIndex(val => transfer[0].includes('object Object')) >= 0)
-      transfer.push("Há objeto no retorno, verifique no console do navegador para mais detalhes.")
+      transfer.push("Há objeto no retorno, verifique no console do navegador para mais detalhes.");
+
+    transfer.push('Esperado: ' + solucao);
+    transfer.push(transfer[0] === solucao ? 'Teste passou! 😀 ' : "Teste falhou 😞 ");
+
     transfer = transfer.map((code, i) =>
       <Code key={i} code={code} className={`language-js`} butt={'0'}></Code>
     );
     this.setState({ conteudo: transfer });
+
   }
 
   state = { conteudo: transfer };
@@ -31,15 +43,27 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h3>JEP - Javascript Explorer Playground <a href="https://github.com/start-tech-react/JEP">Repositório GitHub</a></h3>
+          <h3>JEP - Javascript Explorer Playground - Exercícios</h3>
         </header>
         <main>
-          <Explorer loging={() => this.loging()} tranfer={this.state.conteudo} />
-          <Console loging={() => this.loging()} tranfer={this.state.conteudo} />
+          <Switch>
+            <Route path="/exer/:id" children={<Probl loging={() => this.loging()} transfer={this.state.conteudo} />} />
+
+          </Switch>
+
         </main>
       </div>
     );
   };
+};
+
+function Probl(props) {
+  let { id } = useParams();
+  if (!snippet) ({ [id]: snippet } = exercicios);
+  if (snippet) ({ problema, solucao } = snippet);
+  return (
+    <Console loging={props.loging} transfer={props.transfer} />
+  );
 };
 
 export class Code extends Component {
@@ -78,65 +102,6 @@ export class Code extends Component {
   }
 }
 
-class Explorer extends Component {
-  constructor(props) {
-    super(props);
-    this.imp = React.createRef();
-    this.cat = React.createRef();
-  }
-
-  componentDidMount() {
-    this.listar(snippets);
-    this.listarCat(categories);
-  }
-
-  listCat = [];
-  listItems = [];
-  state = { conteudo: this.listItems, categorias: this.listCat };
-  listar = (lista) => {
-    this.listItems = lista.map((code, i) =>
-      <Code
-        key={i}
-        code={code}
-        language="js"
-        loging={() => this.props.loging()}
-        tranfer={this.props.tranfer}
-      />
-    );
-    this.setState({ conteudo: this.listItems });
-  }
-
-
-  listarCat = (lista) => {
-    this.listCat = lista.map((cat, i) =>
-      <option key={i}>{cat}</option>
-    );
-    this.setState({ categorias: this.listCat });
-  }
-
-  search = () => {
-    if (this.imp && this.imp.current) {
-      const result = snippets.filter(i => i.includes(this.imp.current.value));
-      this.listar(result);
-    }
-  }
-
-  categotieChange = () => {
-    this.imp.current.value = this.cat.current.value;
-    this.search();
-  }
-
-  render() {
-    return (
-      <div className="snippets">
-        <select ref={this.cat} onChange={this.categotieChange} className="categories">{this.state.categorias}</select>
-        <input ref={this.imp} onKeyUp={this.search} className="btn-search" type="text" id="" />
-        {this.state.conteudo}
-      </div>
-    );
-  }
-}
-
 class Console extends Component {
   execute = () => {
     evaluate(document.getElementById('code').value);
@@ -147,15 +112,19 @@ class Console extends Component {
     return (
       <div className="box">
         <div className="console">
-          <textarea id="code" defaultValue={valor} cols="50" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
+          <textarea id="code" defaultValue={problema} cols="50" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
           {/* <Editor
             code={valor}
             language="js"
             loging={() => this.props.loging()}
             tranfer={this.props.tranfer}
           /> */}
-          <button onClick={this.execute} className='btn-executar'>Executar o código acima.</button>
-          <div className="consolelog">{this.props.tranfer}</div>
+          <div>
+            <Link to="/"><button className='btn-executar'>Voltar</button></Link>
+            <button onClick={this.execute} className='btn-executar'>Executar o código acima.</button>
+          </div>
+
+          <div className="consolelog">{this.props.transfer}</div>
         </div>
       </div>
     );
@@ -199,7 +168,7 @@ function evaluate(y) {
   transfer = [];
   var script = document.createElement('script');
   script.type = "text/javascript";
-  script.text = "{console.clear();" + y + "}";
+  script.text = "{console.clear();" + y + "\n}";
   document.getElementById("code").value = y;
   document.getElementsByTagName('head')[0].appendChild(script);
   document.head.removeChild(document.head.lastChild);

@@ -1,8 +1,5 @@
-const cap = [];
-
-module.exports = { cap };
-
-cap.push(`
+const cap = [{
+    snippet: `
 // Cap.5 Objeto
 // Criação de Objetos
 
@@ -18,9 +15,14 @@ const objPessoa = {
 
 objPessoa.oie('oie');
 console.log(objPessoa);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+}
+];
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.5 Objeto
 // Acessando Objetos
 
@@ -40,9 +42,13 @@ console.log('Bem-vinda2 ' + objPessoa["nome"]);
 console.log('Bem-vinda3 ' + objPessoa[varBusca]);
 console.log('Bem-vinda4 ' + nome + ' ' + idade);
 console.log('Bem-vinda5 ' + apelido1 + ' ' + apelido2 );
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.5 Objeto
 // Manipulando
 const objPessoa = {
@@ -63,9 +69,13 @@ for (const i of objPessoa.apelidos) {
 console.log(objPessoa.nome + ' tem ' + objPessoa.idade);
 console.log(objPessoa.altura + ' + cm de altura');
 console.log('E os apelidos: ' + apelidos);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.5 Objeto
 // Mais formas de manipular o objeto
 const objPessoa = {
@@ -87,9 +97,13 @@ objPessoa.teste = "Será apagado";
 delete objPessoa.teste;
 
 console.log(objPessoa);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.5 Objeto
 // Objeto dentro de objeto
 const carro = {
@@ -110,4 +124,9 @@ const objPessoa = {
 
 console.log(objPessoa);
 
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
+
+module.exports = { cap };

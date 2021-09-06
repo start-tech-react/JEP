@@ -7,6 +7,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 .App {
     display: flex;
     flex-direction: column;
@@ -99,7 +103,6 @@ main {
 
 pre {
     position: relative;
-    /* max-width: 500px; */
     transition: all 1s ease;
 }
 
@@ -107,12 +110,16 @@ pre:hover {
     box-shadow: 0 0 60px 20px rgba(255, 255, 255, 0.1), 0 0 100px 40px rgba(255, 0, 255, 0.1), 0 0 100px 90px rgba(0, 255, 255, 0.1) !important;
 }
 
+.controls{
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+
 pre button {
     color: rgba(255, 255, 255, 0.5);
     padding: 2px;
-    position: absolute;
-    top: 3px;
-    right: 3px;
+    margin-right: 5px;
     background-color: rgba(105, 105, 105, 0.218);
     border: 1px solid #61dafb77;
     border-radius: 5px;
@@ -121,9 +128,6 @@ pre button {
 
 pre button:hover {
     color: rgba(255, 255, 255, 1);
-    position: absolute;
-    top: 3px;
-    right: 3px;
     background-color: rgba(105, 105, 105, 0.218);
 }
 
@@ -153,4 +157,22 @@ pre button:hover {
     to {
         transform: rotate(360deg);
     }
+}
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0.01;
+    transition: all 0.5s ease;
 }

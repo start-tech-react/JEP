@@ -1,14 +1,19 @@
 const exercicios = {
-    variables01: [`
+    variables_string: {
+        problema: `
 // Cap.1 Tipos
 // Strings
-console.log('Strings', "Eu sou uma string");
-`,
-        `
+// Usando só console.log escreva uma string 'eu sou uma string' no console.`,
+        solucao: `eu sou uma string`
+    },
+
+    variables_number: {
+        problema: `
 // Cap.1 Tipos
-// Strings
-console.log('Strings', "Eu sou uma string");
-`]
+// Número inteiro
+//`,
+        solucao: `5`
+    },
 };
 
 module.exports = exercicios;

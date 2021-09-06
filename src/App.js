@@ -6,7 +6,7 @@ import './App.css';
 import './prism.css';
 import { categories } from './snippets/categories';
 const snippets = [];
-for (let caps = 1; caps < 14; caps++) {
+for (let caps = 1; caps < 6; caps++) {
   const { cap } = require("./snippets/cap" + caps);
   snippets.push(...cap);
 }
@@ -64,15 +64,19 @@ export class Code extends Component {
     this.props.loging();
   }
   render() {
-    const { code, plugins, language, butt } = this.props;
+    const { code, plugins, language, butt, exercLink } = this.props;
     const button = butt ? '' : <button onClick={this.execute}>executar</button>;
+    const exercButton = exercLink ? <Link to="/exer/variables_string"><button>exercício</button></Link> : '';
 
     return (
       <pre className={!plugins ? "" : plugins.join(" ")}>
         <code ref={this.ref} className={`language-${language}`}>
           {code.trim()}
         </code>
-        {button}
+        <div className='controls'>
+          {exercButton}
+          {button}
+        </div>
       </pre>
     )
   }
@@ -96,11 +100,12 @@ class Explorer extends Component {
   listar = (lista) => {
     this.listItems = lista.map((code, i) =>
       <Code
-        key={i}
-        code={code}
+        key={'code' + i}
+        code={code.snippet}
         language="js"
         loging={() => this.props.loging()}
         tranfer={this.props.tranfer}
+        exercLink={code.exercicio}
       />
     );
     this.setState({ conteudo: this.listItems });
@@ -116,7 +121,7 @@ class Explorer extends Component {
 
   search = () => {
     if (this.imp && this.imp.current) {
-      const result = snippets.filter(i => i.includes(this.imp.current.value));
+      const result = snippets.filter(i => i.snippet.includes(this.imp.current.value));
       this.listar(result);
     }
   }
@@ -167,7 +172,7 @@ class Console extends Component {
 //     super(props);
 //     this.ref = React.createRef();
 //   }
-//   state = { code: '' };
+//   state = {code: '' };
 //   componentDidMount() {
 //     this.highlight();
 //   }
@@ -181,7 +186,7 @@ class Console extends Component {
 //     this.props.loging();
 //   }
 //   render() {
-//     const { code, plugins, language } = this.props;
+//     const {code, plugins, language} = this.props;
 //     return (
 //       <pre className={!plugins ? "" : plugins.join(" ")}>
 //         <code ref={this.ref} className={`language-${language}`}>

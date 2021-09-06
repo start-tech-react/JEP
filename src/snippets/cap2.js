@@ -1,26 +1,32 @@
-const cap = [`
-// Explorando o console
-console.log(console);`];
-
-cap.push(`
+const cap = [{
+    snippet: `
 // Cap.2 Escopos
 let result = 1;
 {
     result = 2; //puxa pra cima
 }
 console.log(result);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+}
+];
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Escopos
 let result = 1;
 {
     let result = 2; // só existe aqui
 }
 console.log(result);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Escopos
 let result = 1;
 {
@@ -33,27 +39,39 @@ let result = 1;
     }
 }
 console.log(result);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Escopos
 {
     let result = 11;
 }
 
 console.log(typeof result);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Escopos
 {
     const result = 33;
 }
 
 console.log(typeof result);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Sem parametros com retorno
 function foo () {
@@ -61,43 +79,67 @@ function foo () {
 }
 
 console.log(foo());
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Com parametros sem retorno
 function foo (param) {
     console.log(param);
 }
 foo("Teste2");
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Confirmação nativa
 console.log(confirm("Vamos nessa?"))
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Requisição nativa
 console.log(prompt("Digite", "Algo"))
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Aviso nativo
 console.log(alert("Você clicou em executar..."))
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Interação
 const num = prompt("Digite um número");
 console.log(alert('O quadrado de '+num+" é "+num**2));
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções Recursivas Loop
 function foo (vezes, atual) {
     if (atual < vezes) {
@@ -111,16 +153,24 @@ function foo (vezes, atual) {
     //console.log(atual)
 }
 foo(5,0);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Arrow Function =>
 const a = () => 5 * 8;
 console.log(a());
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Funções
 // Arrow Function =>
 const a = () => {
@@ -128,83 +178,127 @@ const a = () => {
    return b;
 };
 console.log(a());
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Execução Condicional
 if (5==5) console.log("Yes");
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Execução Condicional
 if (5==5 || 4 > 3 || 5 < 7) 
     console.log("Yes2");
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Execução Condicional If
 if (5==5) {
     console.log("Yes3")
 };
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Execução Condicional If Else
 if (variable == "value1") console.log('1 if');
 else if (variable == "value2") console.log('elseif1');
 else if (variable == "value3") console.log('elseif2');
 else console.log('else');;
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Execução Condicional
 // Ternário
 (5==5 || 4 > 3 || 5 < 7) ?
     console.log("Yes4") :
     console.log("Nooo");
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Loops While e Do
 let number = 0;
 while (number <= 12) {
     console.log(number);
     number = number + 2;
 }
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Loops While e Do
 let cont = 0
 do {
     cont++;
     console.log(cont);
 } while (cont < 6);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Loops for
 for (var i = 0; i <= 12; i = i + 2)
   console.log(i);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Loops for
 for (var i = 0; i <= 12; i = i + 2) {
    console.log(i); 
 }
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Loops for com break
 for (var i = 10; ; i++) {
     console.log(i)
     if (i % 7 == 0)
       break;
 }
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Loops Exemplo
 const rna = "UGGUGUUAUUAAUGGUUU";
 const codons = [];
@@ -212,9 +306,13 @@ for (let i = 0; i < rna.length; i += 3) {
     codons.push(rna[i] + rna[i + 1] + rna[i + 2]);
 }
 console.log(codons.join('|'));
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Atualização Sucinta
 let a = 5;
 a++;
@@ -225,9 +323,13 @@ a += 5;
 console.log(a);
 a -= 5;
 console.log(a);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Atualização Sucinta
 let a = 5;
 a *= 2;
@@ -236,9 +338,13 @@ a /= 5;
 console.log(a);
 a **= 2;
 console.log(a);
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
-cap.push(`
+cap.push({
+    snippet: `
 // Cap.2 Condicional Switch
 switch (prompt("Como está?")) {
     case "feliz":
@@ -251,6 +357,9 @@ switch (prompt("Como está?")) {
       console.log("Não entendi");
       break;
   }
-`);
+`,
+    exercicio: 'variables_string',
+    mdn: ''
+});
 
 module.exports = { cap };
