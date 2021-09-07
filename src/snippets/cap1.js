@@ -3,7 +3,7 @@ const cap = [{
 // Explorando o console
 console.log(console);`,
     exercicio: 'variables_string',
-    mdn: ''
+    mdn: 'API/Console/log'
 }
 ];
 
@@ -18,7 +18,7 @@ const obj = [
 console.table(obj);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/API/Console/table'
 });
 
 cap.push({
@@ -28,7 +28,7 @@ cap.push({
 console.log('Strings', "Eu sou uma string");
 `,
     exercicio: 'variables_string',
-    mdn: ''
+    mdn: 'Web/API/Console/log'
 });
 
 cap.push({
@@ -38,7 +38,7 @@ cap.push({
 console.log('Inteiros', 122);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Number'
 });
 
 cap.push({
@@ -89,7 +89,7 @@ let variavel;
 console.log('Undefined', variavel);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Global_Objects/undefined'
 });
 
 cap.push({
@@ -100,7 +100,7 @@ const b = 3;
 console.log('Soma de a + b', a + b);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -111,7 +111,7 @@ const b = 3;
 console.log('Subtração de a - b', a - b);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -122,7 +122,7 @@ const b = 3;
 console.log('Multiplicação de a * b', a * b);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -133,7 +133,7 @@ const b = 3;
 console.log('Divisão de a / b', a / b);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -144,7 +144,7 @@ const b = 3;
 console.log('Módulo ou resto: a % b', a % b);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -155,7 +155,7 @@ const b = 3;
 console.log('Exponenciação de a ** b', a ** b);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -166,7 +166,7 @@ const b = 1/2; // 1/2 é raíz quadrada
 console.log('Radiciação de a ** b', a ** b);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -177,7 +177,7 @@ const b = 6;
 console.log('Invertido sinal -()', -(a - b));
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -187,7 +187,7 @@ const a = "con" + "cat" + "e" + "nate";
 console.log('Concatenação', a);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 // eslint-disable-next-line no-template-curly-in-string
@@ -209,7 +209,7 @@ console.log(typeof 4.33);
 console.log(typeof "texto");
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators/typeof'
 });
 
 cap.push({
@@ -226,7 +226,7 @@ console.log('-Infinity', -Infinity ? 1 : 0);
 console.log('new Boolean()', new Boolean(false) ? 1 : 0);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Glossary/Truthy'
 });
 
 cap.push({
@@ -241,7 +241,7 @@ console.log('NaN', NaN ? 1 : 0);
 console.log('', '' ? 1 : 0);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Glossary/Falsy'
 });
 
 cap.push({
@@ -257,7 +257,7 @@ console.log('NaN > NaN', NaN > NaN);
 console.log('undefined > NaN', undefined > NaN);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -273,7 +273,7 @@ console.log('NaN < NaN', NaN < NaN);
 console.log('undefined < NaN', undefined < NaN);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -291,7 +291,7 @@ console.log('null == undefined', null == undefined);
 console.log('0 == undefined', 0 == undefined);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -309,7 +309,7 @@ console.log('null === undefined', null === undefined);
 console.log('0 === undefined', 0 === undefined);
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -321,7 +321,7 @@ console.log('"JEP" === "JEP"', "JEP" !== "JEP");
 console.log('1.00000 === "1"', 1.00000 != "1");
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -333,7 +333,7 @@ console.log('"JEP" === "JEP"', "JEP" !== "JEP");
 console.log('1.00000 === "1"', 1.00000 != "1");
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -345,7 +345,7 @@ console.log('"JEP" === "JEP"', "JEP" !== "JEP");
 console.log('1.00000 === "1"', 1.00000 != "1");
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -357,7 +357,7 @@ console.log('"JEP" === "JEP"', "JEP" !== "JEP");
 console.log('1.00000 === "1"', 1.00000 != "1");
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 cap.push({
@@ -367,7 +367,7 @@ cap.push({
 console.log('ok');
 `,
     exercicio: '',
-    mdn: ''
+    mdn: 'Web/JavaScript/Reference/Operators'
 });
 
 module.exports = { cap };

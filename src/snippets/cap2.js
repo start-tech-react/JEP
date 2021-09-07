@@ -7,8 +7,8 @@ let result = 1;
 }
 console.log(result);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Glossary/Scope'
 }
 ];
 
@@ -21,8 +21,8 @@ let result = 1;
 }
 console.log(result);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Glossary/Scope'
 });
 
 cap.push({
@@ -40,8 +40,8 @@ let result = 1;
 }
 console.log(result);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Glossary/Scope'
 });
 
 cap.push({
@@ -53,8 +53,8 @@ cap.push({
 
 console.log(typeof result);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Glossary/Scope'
 });
 
 cap.push({
@@ -66,8 +66,8 @@ cap.push({
 
 console.log(typeof result);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Glossary/Scope'
 });
 
 cap.push({
@@ -80,8 +80,8 @@ function foo () {
 
 console.log(foo());
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -93,8 +93,8 @@ function foo (param) {
 }
 foo("Teste2");
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -103,8 +103,8 @@ cap.push({
 // Confirmação nativa
 console.log(confirm("Vamos nessa?"))
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -113,8 +113,8 @@ cap.push({
 // Requisição nativa
 console.log(prompt("Digite", "Algo"))
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -123,8 +123,8 @@ cap.push({
 // Aviso nativo
 console.log(alert("Você clicou em executar..."))
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -134,8 +134,8 @@ cap.push({
 const num = prompt("Digite um número");
 console.log(alert('O quadrado de '+num+" é "+num**2));
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -154,8 +154,8 @@ function foo (vezes, atual) {
 }
 foo(5,0);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -165,8 +165,8 @@ cap.push({
 const a = () => 5 * 8;
 console.log(a());
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -179,8 +179,8 @@ const a = () => {
 };
 console.log(a());
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Global_Objects/Function'
 });
 
 cap.push({
@@ -188,8 +188,8 @@ cap.push({
 // Cap.2 Execução Condicional
 if (5==5) console.log("Yes");
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/if...else'
 });
 
 cap.push({
@@ -198,8 +198,8 @@ cap.push({
 if (5==5 || 4 > 3 || 5 < 7) 
     console.log("Yes2");
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/if...else'
 });
 
 cap.push({
@@ -209,8 +209,8 @@ if (5==5) {
     console.log("Yes3")
 };
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/if...else'
 });
 
 cap.push({
@@ -221,8 +221,8 @@ else if (variable == "value2") console.log('elseif1');
 else if (variable == "value3") console.log('elseif2');
 else console.log('else');;
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/if...else'
 });
 
 cap.push({
@@ -233,8 +233,8 @@ cap.push({
     console.log("Yes4") :
     console.log("Nooo");
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Operators/Conditional_Operator'
 });
 
 cap.push({
@@ -246,8 +246,8 @@ while (number <= 12) {
     number = number + 2;
 }
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/while'
 });
 
 cap.push({
@@ -259,8 +259,8 @@ do {
     console.log(cont);
 } while (cont < 6);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/do...while'
 });
 
 cap.push({
@@ -269,8 +269,8 @@ cap.push({
 for (var i = 0; i <= 12; i = i + 2)
   console.log(i);
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/for'
 });
 
 cap.push({
@@ -280,8 +280,8 @@ for (var i = 0; i <= 12; i = i + 2) {
    console.log(i); 
 }
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/for'
 });
 
 cap.push({
@@ -293,8 +293,8 @@ for (var i = 10; ; i++) {
       break;
 }
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/break'
 });
 
 cap.push({
@@ -307,8 +307,8 @@ for (let i = 0; i < rna.length; i += 3) {
 }
 console.log(codons.join('|'));
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/for'
 });
 
 cap.push({
@@ -324,7 +324,7 @@ console.log(a);
 a -= 5;
 console.log(a);
 `,
-    exercicio: 'variables_string',
+    exercicio: '',
     mdn: ''
 });
 
@@ -339,7 +339,7 @@ console.log(a);
 a **= 2;
 console.log(a);
 `,
-    exercicio: 'variables_string',
+    exercicio: '',
     mdn: ''
 });
 
@@ -358,8 +358,8 @@ switch (prompt("Como está?")) {
       break;
   }
 `,
-    exercicio: 'variables_string',
-    mdn: ''
+    exercicio: '',
+    mdn: 'Web/JavaScript/Reference/Statements/switch'
 });
 
 module.exports = { cap };

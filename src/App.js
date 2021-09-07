@@ -5,8 +5,9 @@ import Prism from 'prismjs';
 import './App.css';
 import './prism.css';
 import { categories } from './snippets/categories';
+const mdn = 'https://developer.mozilla.org/pt-BR/docs/';
 const snippets = [];
-for (let caps = 1; caps < 7; caps++) {
+for (let caps = 1; caps < 8; caps++) {
   const { cap } = require("./snippets/cap" + caps);
   snippets.push(...cap);
 }
@@ -42,45 +43,7 @@ export class App extends Component {
   };
 };
 
-export class Code extends Component {
-  constructor(props) {
-    super(props);
-    this.ref = React.createRef();
-  }
-  state = { code: '' };
-  componentDidMount() {
-    this.highlight();
-  }
-  componentDidUpdate() {
-    this.highlight();
-  }
-  highlight = () => {
-    if (this.ref && this.ref.current) {
-      Prism.highlightElement(this.ref.current);
-    }
-  }
-  execute = () => {
-    evaluate(this.ref.current.textContent);
-    this.props.loging();
-  }
-  render() {
-    const { code, plugins, language, butt, exercLink } = this.props;
-    const button = butt ? '' : <button onClick={this.execute}>executar</button>;
-    const exercButton = exercLink ? <Link to={'/exer/' + exercLink}><button>exercício</button></Link> : '';
 
-    return (
-      <pre className={!plugins ? "" : plugins.join(" ")}>
-        <code ref={this.ref} className={`language-${language}`}>
-          {code.trim()}
-        </code>
-        <div className='controls'>
-          {exercButton}
-          {button}
-        </div>
-      </pre>
-    )
-  }
-}
 
 class Explorer extends Component {
   constructor(props) {
@@ -106,6 +69,7 @@ class Explorer extends Component {
         loging={() => this.props.loging()}
         tranfer={this.props.tranfer}
         exercLink={code.exercicio}
+        mdnLink={code.mdn}
       />
     );
     this.setState({ conteudo: this.listItems });
@@ -142,6 +106,47 @@ class Explorer extends Component {
   }
 }
 
+export class Code extends Component {
+  constructor(props) {
+    super(props);
+    this.ref = React.createRef();
+  }
+  state = { code: '' };
+  componentDidMount() {
+    this.highlight();
+  }
+  componentDidUpdate() {
+    this.highlight();
+  }
+  highlight = () => {
+    if (this.ref && this.ref.current) {
+      Prism.highlightElement(this.ref.current);
+    }
+  }
+  execute = () => {
+    evaluate(this.ref.current.textContent);
+    this.props.loging();
+  }
+  render() {
+    const { code, plugins, language, butt, exercLink, mdnLink } = this.props;
+    const button = butt ? '' : <button onClick={this.execute}>executar</button>;
+    const exercButton = exercLink ? <Link to={'/exer/' + exercLink}><button>exercício</button></Link> : '';
+    const mdnButton = mdnLink ? <a href={mdn + mdnLink} target='_blank' rel="noreferrer" title='Ver Documentação'><button>MDN</button></a> : '';
+
+    return (
+      <pre className={!plugins ? "" : plugins.join(" ")}>
+        <code ref={this.ref} className={`language-${language}`}>
+          {code.trim()}
+        </code>
+        <div className='controls'>
+          {mdnButton}
+          {exercButton}
+          {button}
+        </div>
+      </pre>
+    )
+  }
+}
 class Console extends Component {
   execute = () => {
     evaluate(document.getElementById('code').value);

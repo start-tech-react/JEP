@@ -15,7 +15,8 @@ const categories = [
     'Cap.2 Atualização Sucinta',
     'Cap.4 Strings e Arrays',
     'Cap.5 Objeto',
-    'Cap.6 Classes'
+    'Cap.6 Classes',
+    'Cap.7'
 
 ];
 
