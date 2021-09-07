@@ -6,7 +6,7 @@ import './App.css';
 import './prism.css';
 import { categories } from './snippets/categories';
 const snippets = [];
-for (let caps = 1; caps < 6; caps++) {
+for (let caps = 1; caps < 7; caps++) {
   const { cap } = require("./snippets/cap" + caps);
   snippets.push(...cap);
 }
@@ -66,7 +66,7 @@ export class Code extends Component {
   render() {
     const { code, plugins, language, butt, exercLink } = this.props;
     const button = butt ? '' : <button onClick={this.execute}>executar</button>;
-    const exercButton = exercLink ? <Link to="/exer/variables_string"><button>exercício</button></Link> : '';
+    const exercButton = exercLink ? <Link to={'/exer/' + exercLink}><button>exercício</button></Link> : '';
 
     return (
       <pre className={!plugins ? "" : plugins.join(" ")}>

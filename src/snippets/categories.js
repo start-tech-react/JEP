@@ -14,7 +14,9 @@ const categories = [
     'Cap.2 Loops',
     'Cap.2 Atualização Sucinta',
     'Cap.4 Strings e Arrays',
-    'Cap.5 Objeto'
+    'Cap.5 Objeto',
+    'Cap.6 Classes'
+
 ];
 
 module.exports = { categories };

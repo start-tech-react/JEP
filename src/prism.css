@@ -16,7 +16,7 @@ pre[class*="language-"] {
     font-size: 0.9em;
     text-align: left;
     text-shadow: 0 -.1em .2em black;
-    white-space: pre-line;
+    white-space: pre-wrap;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
