@@ -139,8 +139,8 @@ code[class*="language-"] ::selection {
 .style .token.string,
 .token.variable,
 .token.inserted {
-    color: hsl(76, 21%, 52%);
-    /* #8F9D6A */
+    color: hsl(44, 100%, 65%);
+    /* #FFCF4D */
 }
 
 .token.atrule {

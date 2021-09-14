@@ -3,7 +3,7 @@ const cap = [{
 // Explorando o console
 console.log(console);`,
     exercicio: 'variables_string',
-    mdn: 'API/Console/log'
+    mdn: 'Web/API/Console/log'
 }
 ];
 

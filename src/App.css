@@ -21,11 +21,14 @@ a {
 
 main {
     position: relative;
-    background-color: #282c34;
+    background-color: #0e0d0c;
+    background-image: url(https://iili.io/RgWT0b.jpg);
+    background-position: 100% 0%;
+    background-attachment: fixed;
+    background-size: contain;  
     width: 100%;
     min-height: 100vh;
     display: flex;
-    /* flex-direction: column; */
     align-items: flex-start;
     justify-content: space-evenly;
     font-size: calc(10px + 2vmin);
@@ -93,12 +96,16 @@ main {
     padding: 15px;
     margin: 0 15px;
     padding: 10px;
-    color: #61dafb;
+    color: white;
     background-color: rgba(105, 105, 105, 0.218);
-    border: 1px solid #61dafb77;
+    border: 1px solid #FFC629;
     border-radius: 15px;
     transition: all 0.5s ease;
     font-size: 20px;
+}
+
+#code:hover, #code:active {
+    background-color: #0e0d0c;
 }
 
 pre {
@@ -107,7 +114,7 @@ pre {
 }
 
 pre:hover {
-    box-shadow: 0 0 60px 20px rgba(255, 255, 255, 0.1), 0 0 100px 40px rgba(255, 0, 255, 0.1), 0 0 100px 90px rgba(0, 255, 255, 0.1) !important;
+    box-shadow: 0 0 60px 20px #FFC629, 0 0 100px 40px rgba(255, 0, 255, 0.1), 0 0 100px 90px rgba(0, 255, 255, 0.1) !important;
 }
 
 .controls{
@@ -117,11 +124,11 @@ pre:hover {
 }
 
 pre button {
-    color: rgba(255, 255, 255, 0.5);
+    color: #FFC629;
     padding: 2px;
     margin-right: 5px;
     background-color: rgba(105, 105, 105, 0.218);
-    border: 1px solid #61dafb77;
+    border: 1px solid #FFC629;
     border-radius: 5px;
     transition: all 0.5s ease;
 }
@@ -132,22 +139,22 @@ pre button:hover {
 }
 
 .App-link {
-    color: #61dafb;
+    color: #FFC629;
 }
 
 .btn-executar {
     margin: 15px;
     padding: 10px;
-    color: #61dafb;
+    color: #FFC629;
     background-color: rgba(105, 105, 105, 0.218);
-    border: 1px solid #61dafb77;
+    border: 1px solid #FFC629;
     border-radius: 5px;
     transition: all 0.5s ease;
     font-size: 20px;
 }
 
 .btn-executar:hover {
-    color: #dbf7ff;
+    color: white;
 }
 
 @keyframes App-logo-spin {
