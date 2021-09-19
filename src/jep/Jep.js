@@ -1,20 +1,26 @@
 // Versão para colaboração
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
+// Colorização de Código
 import Prism from 'prismjs';
-import './App.css';
 import './prism.css';
+
+// Estilo
+import './Jep.css';
+
+// Snippets temporários em array/objto
 import { categories } from './snippets/categories';
-const mdn = 'https://developer.mozilla.org/pt-BR/docs/';
 const snippets = [];
 for (let caps = 1; caps < 8; caps++) {
   const { cap } = require("./snippets/cap" + caps);
   snippets.push(...cap);
 }
-Prism.manual = true;
+
+const mdnLinkBase = 'https://developer.mozilla.org/pt-BR/docs/';
 let valor = "console.log('This is JEP');";
 let transfer = [];
-export class App extends Component {
+export class Jep extends Component {
   loging = () => {
     if (!transfer.length)
       transfer.push('Para essa operação, verifique no console do navegador.');
@@ -32,7 +38,7 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h3>JEP - Javascript Explorer Playground <a href="https://github.com/start-tech-react/JEP">Repositório GitHub</a></h3>
+          <h1>JEP - Javascript Explorer Playground <a href="https://github.com/start-tech-react/JEP">Repositório GitHub</a></h1>
         </header>
         <main>
           <Explorer loging={() => this.loging()} tranfer={this.state.conteudo} />
@@ -48,7 +54,7 @@ export class App extends Component {
 class Explorer extends Component {
   constructor(props) {
     super(props);
-    this.imp = React.createRef();
+    this.searchImput = React.createRef();
     this.cat = React.createRef();
   }
 
@@ -83,23 +89,24 @@ class Explorer extends Component {
     this.setState({ categorias: this.listCat });
   }
 
-  search = () => {
-    if (this.imp && this.imp.current) {
-      const result = snippets.filter(i => i.snippet.includes(this.imp.current.value));
-      this.listar(result);
-    }
+  searchSnippets = () => {
+    const stringBuscada = this.searchImput.current.value;
+    if (!stringBuscada) return;
+    const termosBuscados = this.searchImput.current.value.toLowerCase().split(' ').filter(x => x);
+    const snippetsEncontrados = snippets.filter(i => termosBuscados.every(termo => i.snippet.toLowerCase().includes(termo)));
+    this.listar(snippetsEncontrados);
   }
 
   categotieChange = () => {
-    this.imp.current.value = this.cat.current.value;
-    this.search();
+    this.searchImput.current.value = this.cat.current.value;
+    this.searchSnippets();
   }
 
   render() {
     return (
       <div className="snippets">
         <select ref={this.cat} onChange={this.categotieChange} className="categories">{this.state.categorias}</select>
-        <input ref={this.imp} onKeyUp={this.search} className="btn-search" type="text" id="" />
+        <input ref={this.searchImput} onKeyUp={this.searchSnippets} className="btn-search" type="text" id="" />
         {this.state.conteudo}
       </div>
     );
@@ -131,7 +138,7 @@ export class Code extends Component {
     const { code, plugins, language, butt, exercLink, mdnLink } = this.props;
     const button = butt ? '' : <button onClick={this.execute}>executar</button>;
     const exercButton = exercLink ? <Link to={'/exer/' + exercLink}><button>exercício</button></Link> : '';
-    const mdnButton = mdnLink ? <a href={mdn + mdnLink} target='_blank' rel="noreferrer" title='Ver Documentação'><button>MDN</button></a> : '';
+    const mdnButton = mdnLink ? <a href={mdnLinkBase + mdnLink} target='_blank' rel="noreferrer" title='Ver Documentação'><button>MDN</button></a> : '';
 
     return (
       <pre className={!plugins ? "" : plugins.join(" ")}>
@@ -203,7 +210,7 @@ class Console extends Component {
 //   }
 // }
 
-export default App;
+export default Jep;
 
 function evaluate(y) {
   transfer = [];

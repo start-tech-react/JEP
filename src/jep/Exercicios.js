@@ -7,20 +7,20 @@ import {
   useParams
 } from "react-router-dom";
 import Prism from 'prismjs';
-import './App.css';
+import './Jep.css';
 import './prism.css';
 import exercicios from './snippets/exercicios';
 
 const url = window.location.href.split('/');
 const exercise = url[url.length - 1];
 let { [exercise]: snippet } = exercicios;
-Prism.manual = true;
+
 let problema = `// Problema ${exercise} não encontrado, verifique a URL`;
 let solucao = 'Nada esperado';
 if (snippet) ({ problema, solucao } = snippet);
 let transfer = [];
 
-export class App extends Component {
+export class Exercicios extends Component {
   loging = () => {
     if (!transfer.length)
       transfer.push('Resultado: ');
@@ -162,7 +162,7 @@ class Console extends Component {
 //   }
 // }
 
-export default App;
+export default Exercicios;
 
 function evaluate(y) {
   transfer = [];
