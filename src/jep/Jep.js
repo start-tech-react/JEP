@@ -38,7 +38,7 @@ export class Jep extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1><a title="powered by Start Tech &#169; Giu Zambot">JEP - JavaScript Explorer Playground</a> <a href="https://github.com/start-tech-react/JEP" title="Repositório no GitHub"><img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png" width="30" height="30"></img></a></h1>
+          <h1><a title="powered by Start Tech &#169; Giu Zambot">JEP - JavaScript Explorer Playground</a> <a href="https://bio.link/react" title="Links úteis"><img src="https://cdn-icons-png.flaticon.com/512/428/428971.png" width="30" height="30"></img></a></h1>
         </header>
         <main>
           <Explorer loging={() => this.loging()} tranfer={this.state.conteudo} />
