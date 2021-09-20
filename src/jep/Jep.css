@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,6 +7,16 @@
 
 body {
     overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #FFFFFF;
+}
+
+h1:hover, h1:visited {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #FFC629;
 }
 
 a {
@@ -17,15 +29,17 @@ a {
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    background-color: #0e0d0c;
 }
 
 main {
     position: relative;
     background-color: #0e0d0c;
-    background-image: url(https://iili.io/RgWT0b.jpg);
+    background-image: url(https://iili.io/RPrgLX.jpg);
     background-position: 100% 0%;
     background-attachment: fixed;
-    background-size: contain;  
+    background-size: 100%;
+    background-repeat: no-repeat;  
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -65,6 +79,11 @@ main {
     top: 1px;
     left: 75px;
     opacity: 0.7;
+}
+
+.imagem {
+    margin-top: 145px;
+    width: 100%;
 }
 
 .categories {

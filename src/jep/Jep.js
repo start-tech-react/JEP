@@ -38,7 +38,7 @@ export class Jep extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>JEP - Javascript Explorer Playground <a href="https://github.com/start-tech-react/JEP">Repositório GitHub</a></h1>
+          <h1><a title="powered by Start Tech &#169; Giu Zambot">JEP - JavaScript Explorer Playground</a> <a href="https://bio.link/react" title="Links úteis"><img src="https://cdn-icons-png.flaticon.com/512/428/428971.png" width="30" height="30"></img></a></h1>
         </header>
         <main>
           <Explorer loging={() => this.loging()} tranfer={this.state.conteudo} />
@@ -174,6 +174,7 @@ class Console extends Component {
           <button onClick={this.execute} className='btn-executar'>Executar o código acima.</button>
           <div className="consolelog">{this.props.tranfer}</div>
         </div>
+        <div className="imagem"><img src="https://i.ibb.co/JpTGPMb/JEP-2.png"></img></div>
       </div>
     );
   }
