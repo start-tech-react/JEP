@@ -14,6 +14,7 @@
 [Clara Vasques](https://github.com/clvasques)<br>
 [Emilly Roberta](https://github.com/EmillyRoberta)<br>
 [Eudes Rodrigues](https://github.com/eron300)<br>
+[Giu Zambot](https://github.com/giuzambot)<br>
 [Jislane Santana](https://github.com/Jislanes)<br>
 [Mariana Rufino](https://github.com/mari-rufino-g)<br>
 [Paloma Calado](https://github.com/palomacalado)<br>
