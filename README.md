@@ -12,6 +12,7 @@
 <p>Turma de React Start Tech:</p>
 
 [Clara Vasques](https://github.com/clvasques)<br>
+[Emilly Roberta](https://github.com/EmillyRoberta)<br>
 [Eudes Rodrigues](https://github.com/eron300)<br>
 [Jislane Santana](https://github.com/Jislanes)<br>
 [Mariana Rufino](https://github.com/mari-rufino-g)<br>
