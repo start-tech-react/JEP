@@ -15,4 +15,4 @@
 [Jislane Santana](https://github.com/Jislanes)<br>
 [Mariana Rufino](https://github.com/mari-rufino-g)<br>
 [Paloma Calado](https://github.com/palomacalado)<br>
-[Clara Vasques](https://github.com/clvasques)<br>
+
