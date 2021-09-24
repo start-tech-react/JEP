@@ -10,3 +10,5 @@
 [JEP Firebase](https://jsexplorer-d8b90.web.app/)
 
 <p>Turma de React Start Tech:</p>
+
+[Jislane Santana](https://github.com/Jislanes)
