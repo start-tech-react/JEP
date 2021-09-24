@@ -20,3 +20,4 @@
 [Paloma Calado](https://github.com/palomacalado)<br>
 [Gabriela Pandini](https://github.com/gabpandini)<br>
 [Laila Cardoso](https://github.com/lailacardoso)<br>
+[Laurão Ribeiro](https://github.com/ribeirolaura)<br>
