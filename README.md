@@ -11,7 +11,8 @@
 
 <p>Turma de React Start Tech:</p>
 
-<p>[Jislane Santana](https://github.com/Jislanes)</p>
-<p>[Mariana Rufino](https://github.com/mari-rufino-g)</p>
-<p>[Paloma Calado](https://github.com/palomacalado)</p>
-<p>[Clara Vasques](https://github.com/clvasques)</p>
+[Clara Vasques](https://github.com/clvasques)<br>
+[Jislane Santana](https://github.com/Jislanes)<br>
+[Mariana Rufino](https://github.com/mari-rufino-g)<br>
+[Paloma Calado](https://github.com/palomacalado)<br>
+[Clara Vasques](https://github.com/clvasques)<br>
