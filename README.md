@@ -21,6 +21,7 @@
 [Laurão Ribeiro](https://github.com/ribeirolaura)<br>
 [Luana Kuster](https://github.com/luanadkuster)<br>
 [Mariana Rufino](https://github.com/mari-rufino-g)<br>
+[Mayhhara Morais](https://github.com/mflilian)<br>
 [Paloma Calado](https://github.com/palomacalado)<br>
 [Paloma Souza](https://github.com/plmsz)<br>
 [Rafaela Bittencourt](https://github.com/rafaelabittencourt)<br>
