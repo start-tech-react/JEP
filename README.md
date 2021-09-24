@@ -17,4 +17,5 @@
 [Jislane Santana](https://github.com/Jislanes)<br>
 [Mariana Rufino](https://github.com/mari-rufino-g)<br>
 [Paloma Calado](https://github.com/palomacalado)<br>
+[Gabriela Pandini](https://github.com/gabpandini)<br>
 
