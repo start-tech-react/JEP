@@ -12,3 +12,4 @@
 <p>Turma de React Start Tech:</p>
 
 [Jislane Santana](https://github.com/Jislanes)
+[Mariana Rufino](https://github.com/mari-rufino-g)
