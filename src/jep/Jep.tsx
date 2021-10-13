@@ -11,25 +11,27 @@ import './Jep.css';
 
 // Snippets temporários em array/objto
 import { categories } from './snippets/categories';
-const snippets = [];
+const snippets: Object[] = [];
 for (let caps = 1; caps < 8; caps++) {
   const { cap } = require("./snippets/cap" + caps);
   snippets.push(...cap);
 }
 
 const mdnLinkBase = 'https://developer.mozilla.org/pt-BR/docs/';
-let valor = "console.log('This is JEP');";
-let transfer = [];
+let valor: string = "console.log('This is JEP');";
+let transfer: string[] = [];
+
 export class Jep extends Component {
   loging = () => {
+    let codesElements: JSX.Element[] = [];
     if (!transfer.length)
       transfer.push('Para essa operação, verifique no console do navegador.');
     if (transfer.findIndex(val => transfer[0].includes('object Object')) >= 0)
       transfer.push("Há objeto no retorno, verifique no console do navegador para mais detalhes.")
-    transfer = transfer.map((code, i) =>
+    codesElements = transfer.map((code, i) =>
       <Code key={i} code={code} className={`language-js`} butt={'0'}></Code>
     );
-    this.setState({ conteudo: transfer });
+    this.setState({ conteudo: codesElements });
   }
 
   state = { conteudo: transfer };
@@ -38,7 +40,7 @@ export class Jep extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1><a title="powered by Start Tech &#169; Giu Zambot">JEP - JavaScript Explorer Playground</a> <a href="https://bio.link/react" title="Links úteis"><img src="https://cdn-icons-png.flaticon.com/512/428/428971.png" width="30" height="30"></img></a></h1>
+          <h1><span title='powered by Start Tech'>JEP - JavaScript Explorer Playground</span> <a href='https://bio.link/react' title='Links úteis'><img src="https://cdn-icons-png.flaticon.com/512/428/428971.png" width="30" height="30" alt=''></img></a></h1>
         </header>
         <main>
           <Explorer loging={() => this.loging()} tranfer={this.state.conteudo} />
@@ -49,9 +51,13 @@ export class Jep extends Component {
   };
 };
 
+const explorerStates = {
+  conteudo: '', categorias: ''
+}
 
+type ExplorerStates = Readonly<typeof explorerStates>;
 
-class Explorer extends Component {
+class Explorer extends Component<any, ExplorerStates> {
   constructor(props) {
     super(props);
     this.searchImput = React.createRef();
@@ -65,7 +71,7 @@ class Explorer extends Component {
 
   listCat = [];
   listItems = [];
-  state = { conteudo: this.listItems, categorias: this.listCat };
+  readonly state: ExplorerStates = { conteudo: this.listItems, categorias: this.listCat };
   listar = (lista) => {
     this.listItems = lista.map((code, i) =>
       <Code
@@ -113,8 +119,12 @@ class Explorer extends Component {
   }
 }
 
+interface CodeProps {
+  code: string, plugins: string, language: string, butt: Boolean, exercLink: string, mdnLink: string
+}
+
 export class Code extends Component {
-  constructor(props) {
+  constructor(props: CodeProps) {
     super(props);
     this.ref = React.createRef();
   }
@@ -164,7 +174,7 @@ class Console extends Component {
     return (
       <div className="box">
         <div className="console">
-          <textarea id="code" defaultValue={valor} cols="50" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
+          <textarea id="code" defaultValue={valor} placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
           {/* <Editor
             code={valor}
             language="js"
@@ -174,7 +184,7 @@ class Console extends Component {
           <button onClick={this.execute} className='btn-executar'>Executar o código acima.</button>
           <div className="consolelog">{this.props.tranfer}</div>
         </div>
-        <div className="imagem"><img src="https://i.ibb.co/JpTGPMb/JEP-2.png"></img></div>
+        <div className="imagem"><img src="https://i.ibb.co/JpTGPMb/JEP-2.png" alt=''></img></div>
       </div>
     );
   }
@@ -213,7 +223,7 @@ class Console extends Component {
 
 export default Jep;
 
-function evaluate(y) {
+function evaluate(y: string) {
   transfer = [];
   var script = document.createElement('script');
   script.type = "text/javascript";
@@ -226,7 +236,6 @@ function evaluate(y) {
 const realConsoleLog = console.log;
 console.log = function () {
   let message = [].join.call(arguments, ": ");
-  // transfer += message + "\n";
   transfer.push(message);
   realConsoleLog.apply(console, arguments);
 };
