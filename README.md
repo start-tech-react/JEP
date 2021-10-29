@@ -11,6 +11,7 @@
 
 <p>Turma de React Start Tech:</p>
 
+
 [Clara Vasques](https://github.com/clvasques)<br>
 [Emilly Roberta](https://github.com/EmillyRoberta)<br>
 [Eudes Rodrigues](https://github.com/eron300)<br>
@@ -26,5 +27,6 @@
 [Paloma Calado](https://github.com/palomacalado)<br>
 [Paloma Souza](https://github.com/plmsz)<br>
 [Rafaela Bittencourt](https://github.com/rafaelabittencourt)<br>
+
 
 [![wakatime](https://wakatime.com/badge/user/f4c47eff-1865-493d-9fdd-58464aed559f/project/bd02a9b9-15be-4d93-8271-52df1698d26f.svg)](https://wakatime.com/badge/user/f4c47eff-1865-493d-9fdd-58464aed559f/project/bd02a9b9-15be-4d93-8271-52df1698d26f)
